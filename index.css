@@ -101,7 +101,7 @@ header nav ul li a {
     border: 3px solid white;
     border-width: 0 3px 3px 0;
     z-index: 4;
-    animation: bounce 2s infinite; /* Add animation */
+    animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
@@ -141,7 +141,7 @@ footer {
 }
 
 .footer-logo img {
-    max-width: 200px; /* Adjust size as necessary */
+    max-width: 200px;
     margin-top: 20px;
 }
 
