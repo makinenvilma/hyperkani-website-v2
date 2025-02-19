@@ -104,6 +104,24 @@ header nav ul li a {
     animation: bounce 2s infinite;
 }
 
+.banner .banner-pose-left {
+    position: absolute;
+    bottom: 3%;
+    left: 10%;
+    width: 15%;
+    height: auto;
+    z-index: 3;
+}
+
+.banner .banner-pose-right {
+    position: absolute;
+    bottom: 3%;
+    right: 10%;
+    width: 15%; 
+    height: auto;
+    z-index: 3;
+}
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateX(-50%) translateY(0) rotate(45deg);
@@ -116,16 +134,26 @@ header nav ul li a {
     }
 }
 
-/* Placeholder Title */
-.placeholder {
-    padding: 20px 0;
-    text-align: center;
-    background: #000;
+/* Full-width image */
+.full-width-image {
+    position: relative;
+    height: 50vh;
 }
 
-.placeholder h2 {
-    font-size: 2em;
-    color: #fff;
+.full-width-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full-width-image img.bomber-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: auto;
+    z-index: 2;
 }
 
 /* Footer */
