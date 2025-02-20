@@ -1,4 +1,4 @@
-/* Yleiset tyylit */
+/* General styles */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
@@ -9,15 +9,16 @@ body {
     background-color: #fff;
 }
 
-/* Ylävalikko */
+/* Navbar */
 header {
-    background: transparent;
+    backdrop-filter: blur(10px);
     color: #fff;
     padding: 10px 0;
     text-align: center;
     position: absolute;
     width: 100%;
     z-index: 2;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 header .navbar {
@@ -61,7 +62,6 @@ header nav ul li a {
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: multiply;
-    
     z-index: 1;
 }
 
@@ -74,7 +74,7 @@ header nav ul li a {
 
 .banner .banner-logo {
     position: absolute;
-    top: 45%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 200px;
@@ -83,7 +83,7 @@ header nav ul li a {
 
 .banner .banner-text {
     position: absolute;
-    top: 55%;
+    top: 57%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 2em;
@@ -93,7 +93,7 @@ header nav ul li a {
 
 .banner .down-arrow {
     position: absolute;
-    top: 70%;
+    top: 72%;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
     width: 30px;
@@ -111,6 +111,7 @@ header nav ul li a {
     width: 15%;
     height: auto;
     z-index: 3;
+    animation: bounceIn 1s ease-out forwards;
 }
 
 .banner .banner-pose-right {
@@ -120,6 +121,7 @@ header nav ul li a {
     width: 15%; 
     height: auto;
     z-index: 3;
+    animation: bounceIn 1s ease-out forwards;
 }
 
 @keyframes bounce {
@@ -131,6 +133,23 @@ header nav ul li a {
     }
     60% {
         transform: translateX(-50%) translateY(-5px) rotate(45deg);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px); /* Start below the screen */
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-20px); /* Bounce up */
+    }
+    80% {
+        transform: translateY(10px); /* Slight bounce down */
+    }
+    100% {
+        transform: translateY(0); /* Settle in place */
     }
 }
 
@@ -156,7 +175,7 @@ header nav ul li a {
     z-index: 2;
 }
 
-/* Stunt Car Images */
+/* Stunt Car images */
 .stunt-car-images {
     display: flex;
 }
